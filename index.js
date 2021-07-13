@@ -6,6 +6,8 @@ var $resultHeader = document.querySelector('#result-header')
 var $result = document.querySelector('#result')
 var $gameTime = document.querySelector('#game-time')
 
+var colors = ['red', 'blue', 'green', 'yellow', 'pink']
+
 var score = 0
 var isGameStarted = false
 
@@ -88,7 +90,7 @@ function renderBox() {
 
     box.style.height = box.style.width = `${boxSize}px`
     box.style.position = 'absolute'
-    box.style.backgroundColor = '#000'
+    box.style.backgroundColor = colors[getRandom(0, colors.length)]
     box.style.top = `${getRandom(0, maxTop)}px`
     box.style.left = `${getRandom(0, maxLeft)}px`
     box.style.cursor = 'pointer'
