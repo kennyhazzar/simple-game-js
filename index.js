@@ -25,8 +25,7 @@ function startGame() {
     score = 0
     setGameTime()
     $gameTime.setAttribute('disabled', 'true')
-    show($timeHeader)
-    hide($resultHeader)
+    
     isGameStarted = true
     $game.style.backgroundColor = '#fff'
     $start.classList.add('hide')
@@ -51,6 +50,8 @@ function setGameScore() {
 function setGameTime() {
     var time = +$gameTime.value
     $time.textContent = time.toFixed(1)
+    show($timeHeader)
+    hide($resultHeader)
 }
 
 function endGame() {
